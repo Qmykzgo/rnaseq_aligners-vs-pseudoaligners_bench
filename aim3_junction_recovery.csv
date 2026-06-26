@@ -1,0 +1,4 @@
+Tool,Total_Junctions,Novel_Junctions,Chr21_Novel_Reported,Chr21_Truth,Precision,Recall,F1
+STAR_1pass,344,344,344,3799,0.6134,0.0555,0.1019
+STAR_2pass,345,2,2,3799,0.0,0.0,0.0
+HISAT2,234,234,234,3799,0.7051,0.0434,0.0818

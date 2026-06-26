@@ -1,0 +1,5 @@
+Tool,N_Genes_Overlap,Pearson_r,Pearson_p,Spearman_r,Spearman_p,RMSE_log2FC,Truth_Source
+STAR_featureCounts,212,0.1827,7.66e-03,0.6668,1.23e-28,7.8188,Everaert2017_qPCR_GSE83402
+HISAT2_featureCounts,212,0.1952,4.33e-03,0.6673,1.11e-28,7.7971,Everaert2017_qPCR_GSE83402
+Salmon,211,0.1688,1.41e-02,0.6491,1.25e-26,7.8718,Everaert2017_qPCR_GSE83402
+kallisto,212,0.1279,6.31e-02,0.5756,4.17e-20,7.9214,Everaert2017_qPCR_GSE83402

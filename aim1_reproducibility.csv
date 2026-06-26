@@ -1,0 +1,9 @@
+Tool,Replicate_Pair,N_Genes,Pearson_r,Pearson_p,Spearman_r,Spearman_p
+STAR_featureCounts,SEQC_SampleA,592,0.9606,0.00e+00,0.9388,2.37e-275
+STAR_featureCounts,SEQC_SampleB,550,0.9598,1.84e-304,0.9411,2.52e-260
+HISAT2_featureCounts,SEQC_SampleA,533,0.9534,1.95e-278,0.9226,7.23e-222
+HISAT2_featureCounts,SEQC_SampleB,485,0.9588,3.14e-266,0.9218,6.18e-201
+Salmon,SEQC_SampleA,490,0.8892,7.67e-168,0.9057,4.79e-184
+Salmon,SEQC_SampleB,450,0.8847,1.29e-150,0.9071,1.95e-170
+kallisto,SEQC_SampleA,606,0.8922,1.26e-210,0.9196,2.82e-247
+kallisto,SEQC_SampleB,563,0.9265,2.52e-240,0.9544,8.59e-297
