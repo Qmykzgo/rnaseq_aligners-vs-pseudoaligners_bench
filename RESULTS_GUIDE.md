@@ -1,6 +1,6 @@
 # RNA-seq Benchmark Results Guide
 
-This guide explains where to find the benchmarking results inside `D:\benh\results\` and describes the meaning of the key output files.
+This guide explains where to find the benchmarking results and describes the meaning of the key output files.
 
 ---
 
