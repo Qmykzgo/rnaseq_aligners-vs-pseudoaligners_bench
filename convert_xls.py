@@ -1,19 +1,13 @@
 # convert_xls.py
-import urllib.request
 import pandas as pd
 import re
 import os
 
-url = 'https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-017-01617-3/MediaObjects/41598_2017_1617_MOESM2_ESM.xls'
-xls_path = '/home/yer_kanat/Downloads/rnqbench/data/truth_tables/GSE83402_qPCR.xls'
-gtf_path = '/home/yer_kanat/Downloads/rnqbench/data/reference/GRCh38_ERCC92.gtf'
-out_path = '/home/yer_kanat/Downloads/rnqbench/data/truth_tables/GSE83402_qPCR_normalized.txt'
+xls_path = 'GSE83402_qPCR.xls'
+gtf_path = '/mnt/d/rnaseq_aligners-vs-pseudoaligners_bench/data/reference/GRCh38_ERCC92.gtf'
+out_path = '/mnt/d/rnaseq_aligners-vs-pseudoaligners_bench/data/truth_tables/GSE83402_qPCR_normalized.txt'
 
 try:
-    os.makedirs(os.path.dirname(xls_path), exist_ok=True)
-    print("Downloading Excel...")
-    urllib.request.urlretrieve(url, xls_path)
-    
     print("Parsing GTF for Gene ID to Symbol mapping...")
     gene_map = {}
     gene_id_pat = re.compile(r'gene_id "([^"]+)"')
@@ -51,6 +45,7 @@ try:
     df_out = df[['GeneSymbol', 'MAQCA', 'MAQCB']]
     
     # Save as tab-separated
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     df_out.to_csv(out_path, sep="\t", index=False)
     print("Successfully saved normalized qPCR truth table to:", out_path)
     
